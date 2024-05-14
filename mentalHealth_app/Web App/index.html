@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="mainStyle.css">
+  <link rel="icon" href="./Assets/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Healthier</title>
+
+</head>
+
+<body>
+<script>
+  // define sendRequest here
+  function sendRequest() {
+    var content = document.getElementById("content-target").value;
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "http://127.0.0.1:5000/predictDepression", true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        var response = JSON.parse(xhr.responseText);
+        var modalBody = document.querySelector(".modal-body");
+        modalBody.innerHTML = "";
+        // for (var key in response) {
+          var p = document.createElement("p");
+          p.innerHTML = response;
+          modalBody.appendChild(p);
+        // }
+      }
+    };
+    xhr.send(JSON.stringify({ input: content }));
+  }
+  </script>
+  <nav class="navbar navbar-expand-lg navbar-color">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#feature-container">Features</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#team-container">Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:5501/index.html">YogAI</a>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+
+  <div class="hero" id="hero">
+    <div class="vertical-row">
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+    </div>
+
+    <div class="vertical-row">
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+    </div>
+
+    <div class="vertical-row">
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+    </div>
+
+    <div class="vertical-row">
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+    </div>
+
+    <div class="vertical-row">
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+    </div>
+
+    <div class="vertical-row">
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+    </div>
+
+    <div class="vertical-row">
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+    </div>
+
+    <div class="vertical-row">
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="alan-btn"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+    </div>
+
+    <div class="vertical-row">
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+    </div>
+
+    <div class="vertical-row">
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+    </div>
+
+    <div class="vertical-row">
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+    </div>
+
+    <div class="vertical-row">
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+    </div>
+
+    <div class="vertical-row">
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+    </div>
+
+    <div class="vertical-row">
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+    </div>
+
+    <div class="vertical-row">
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+    </div>
+
+    <div class="vertical-row">
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+    </div>
+
+    <div class="vertical-row">
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+    </div>
+
+    <div class="vertical-row">
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+    </div>
+
+    <div class="vertical-row">
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+    </div>
+
+    <div class="vertical-row">
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+    </div>
+
+    <div class="vertical-row">
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+    </div>
+
+    <div class="vertical-row">
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+    
+    </div>
+
+    <div class="content">
+      <h1>Healthier</h1>
+      <h2>Healthy mind, happy life: Your pocket therapist.</h2>
+  
+      <button style="font-weight: 700;">Get Started &#128293;</button>
+    </div>
+  </div>
+
+  <div class="feature-container" id="feature-container">
+    <div class="feature-container-heading">
+      <h1>Features</h1>
+      <p>Explore the amazing feature &#10084;</p>
+    </div>
+    <div class="wave -one"></div>
+    <div class="wave -two"></div>
+    <div class="wave -three"></div>
+
+    <div class="feature-cards row">
+      <button class="col-md-3 feature" id="detect-schizophrenia">
+        <p class="feature-icon">
+          &#129504;
+        </p>
+        <div class="feature-text">
+          <h2>Detect Schizophrenia, Anxiety and Depression</h1>
+            <p>Upload a WhatsApp chat where you or your friend have expressed your emotions or enter your Twitter
+              username to understand whether there are traces of Schizophrenia.</p>
+        </div>
+      </button>
+
+      <button class="feature col-md-3" id="multilingual">
+        <p class="feature-icon">
+          &#129309;
+        </p>
+        <div class="feature-text">
+          <h2>Available in Regional Indian Languages</h1>
+            <p>Making language a bridge not a barrier, Healthier is available in different Indian regional
+              languages.<br><br><br><br><br><br></p>
+        </div>
+      </button>
+
+
+      <button class="feature col-md-3" id="voice-enabled">
+        <p class="feature-icon">
+
+          &#128483;
+        </p>
+        <div class="feature-text">
+          <h2>Voice Enabled</h1>
+            <p>With the power of Alan AI, Healthier voice assistant - Minty brings out the possibility of this
+              application
+              to be used efficiently with persons suffering from various motor as well visual impairments and is also a
+              support system to the technically challenged individuals.<br><br></p>
+        </div>
+      </button>
+
+
+    </div>
+  </div>
+
+
+
+  <div id="detect-schizophrenia-container">
+    <h1>Detect Schizophrenia, Anxiety and Depression</h1><br>
+    <div class="detect-schizophrenia-sub-container">
+      <div id="whatsapp-chat-container">
+        <div class="schizophrenia-text-fix">
+          <!-- <label for="input-file">Specify a file:</label><br> -->
+          <!-- <input type="file" id="input-file"> -->
+          <textarea id="content-target"></textarea>
+          <!-- <label for="username-to-be-analyzed">Enter the contact name of the user whose chats have to be analyzed: -->
+          <!-- </label> -->
+          <!-- <input type="text" id="username-to-be-analyzed" onblur="getUserVal()"> -->
+        </div>
+      </div>
+      <!-- <div id="twitter-username-container">
+        <label for="twitter-username">Enter Twitter Username:</label><br>
+        <input type="text" id="twitter-username" onblur="getVal()">
+      </div> -->
+    </div>
+    <button type="button" class="btn btn-primary detect" data-toggle="modal" data-target="#exampleModalCenter" onclick="sendRequest()">
+      Analyze
+    </button>
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Here are your results:</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Thanks for Donating!
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="team-container" id="team-container">
+    <h1>Donate to</h1>
+    <div class="row">
+      <div class="team-mate">
+        <h2 class="team-mate-name">Child Rights and You (CRY)</h2>
+        <div class="team-mate-socials">
+          <div>+91-22-61454900</div>
+          <div>189/A Anand Estate, Sane Guruji Marg, Mumbai - 400011, India</div>
+        </div>
+        <!-- <button onclick="sendEther('0x0b85f70318486145c5C84A5deb040D6Ce38f0Cf2')" type="button"
+          class="btn btn-primary detect donateBtn">
+          Donate 0.1 MATIC
+        </button> -->
+      </div>
+      <div class="team-mate">
+        <h2 class="team-mate-name">ActionAid India</h2>
+        <div class="team-mate-socials">
+          <div>+91-11-4155-2300</div>
+          <div>A-3, Defence Colony, New Delhi - 110024, India</div>
+        </div>
+        <!-- <button onclick="sendEther('0xb4752Ef835B04080EEB6Fa33b15532424a511f98')" type="button"
+          class="btn btn-primary detect donateBtn" data-toggle="modal" data-target="#exampleModalCenter">
+          Donate 0.1 MATIC
+        </button> -->
+      </div>
+      <div class="team-mate">
+        <h2 class="team-mate-name">HelpAge India</h2>
+        <div class="team-mate-socials">
+          <div>+91-11-41688955</div>
+          <div>C-14, Qutab Institutional Area, New Delhi - 110016, India</div>
+        </div>
+        <!-- <button onclick="sendEther('0xF696E2A18e76B6b20272961686a85715c1E17b7e')" type="button"
+          class="btn btn-primary detect donateBtn" data-toggle="modal" data-target="#exampleModalCenter">
+          Donate 0.1 MATIC
+        </button> -->
+      </div>
+      <div class="team-mate">
+        <h2 class="team-mate-name">Oxfam India</h2>
+        <div class="team-mate-socials">
+          <div>+91-11-4653-8000</div>
+          <div>4th and 5th Floor, Shriram Bharatiya Kala Kendra, Copernicus Marg, New Delhi - 110001, India</div>
+        </div>
+        <!-- <button onclick="sendEther('0x530aCC5AF5c53Ed48607a4c97a08605B0a848803')" type="button"
+          class="btn btn-primary detect donateBtn" data-toggle="modal" data-target="#exampleModalCenter">
+          Donate 0.1 MATIC
+        </button> -->
+      </div>
+      <div class="team-mate">
+        <h2 class="team-mate-name">SOS Children's Villages of India</h2>
+        <div class="team-mate-socials">
+          <div>+91-11-49500500</div>
+          <div>SOS Children's Villages of India, National Office, Plot No.4, Block C-1, Institutional Area, Nelson
+            Mandela Marg, Vasant Kunj, New Delhi - 110070, India</div>
+        </div>
+        <!-- <button onclick="sendEther('0x70997970C51812dc3A010C7d01b50e0d17dc79C8')" type="button"
+          class="btn btn-primary detect" data-toggle="modal" data-target="#exampleModalCenter">
+          Donate 0.1 MATIC
+        </button> -->
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="team-container" id="team-container">
+    <h1>Meet Our Team </h1>
+    <div class="row">
+      <div class="team-mate">
+        <img src="./Assets/u1.jpeg" alt="" class="team-mate-img">
+        <h2 class="team-mate-name">Aviral Srivastava</h2>
+        <!-- <p class="team-mate-desc">The Chonky Bee</p> -->
+        <div class="team-mate-socials">
+          <a href=""><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
+          <a href=""><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div class="team-mate">
+        <img src="./Assets/u5.jpeg" alt="" class="team-mate-img">
+        <h2 class="team-mate-name">Akhil Raj Srivastava</h2>
+        <!-- <p class="team-mate-desc">The Bunny Rabbit</p> -->
+        <div class="team-mate-socials">
+          <a href=""><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
+          <a href=""><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="alan-btn"></div>
+  <div class="kiran-container" id="kiran-container">
+    <h1>
+      &#128222; +1 72520 93975</h1>
+    <h3>24/7 Helpline Number</h3>
+    <p>
+      The Helpline is a free 24-hour helpline for mental health issues available in Indian regional languages.</p>
+    <div class="kiran-buttons">
+      <button class="kiran-btn" style="background-color: #FF9933;color:#ffffff">Call Now</button>
+      <button class="kiran-btn" style="background-color: #FFFFFF;">Request A Callback</button>
+      <button class="kiran-btn" style="background-color: #138808;color:#ffffff">Chat Now</button>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+  <script>
+    var alanBtnInstance = alanBtn({
+      key: "a0857d0aab49ad43d610608f6aad42102e956eca572e1d8b807a3e2338fdd0dc/stage",
+      onCommand: function (commandData) {
+        if (commandData.command === "go:back") {
+          //call client code that will react on the received command
+        }
+      },
+      rootEl: document.getElementById("alan-btn"),
+    });
+  </script>
+  <script src="https://cdn.ethers.io/lib/ethers-5.4.umd.min.js"></script>
+  <script>
+    const sendEther = async (recipientAddress) => {
+      // Wait for MetaMask to be installed
+      if (typeof window.ethereum !== 'undefined') {
+        // Connect to the MATIC network using MetaMask
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        await window.ethereum.enable();
+        // Use the provider to interact with the MATIC network
+        console.log('Connected to the MATIC network using MetaMask.');
+        const signer = provider.getSigner();
+        //const recipientAddress = "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266";
+        const amountToSend = ethers.utils.parseEther("0.01");
+        console.log(amountToSend)
+
+        const transactionObject = {
+          to: recipientAddress,
+          value: amountToSend
+        };
+
+
+        const transaction = await signer.sendTransaction(transactionObject);
+        console.log('Transaction sent:', transaction);
+
+
+
+      }
+
+
+
+
+      else {
+        console.log('Please install MetaMask to connect to the MATIC network.');
+      }
+
+    }
+  </script>
+</body>
+<script src="./index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"
+  integrity="sha512-lTLt+W7MrmDfKam+r3D2LURu0F47a3QaW5nF0c6Hl0JDZ57ruei+ovbg7BrZ+0bjVJ5YgzsAWE+RreERbpPE1g=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+</html>
