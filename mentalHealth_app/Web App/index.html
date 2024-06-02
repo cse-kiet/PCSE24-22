@@ -38,6 +38,44 @@
     };
     xhr.send(JSON.stringify({ input: content }));
   }
+  function sendRequest2() {
+    var content = document.getElementById("content-target").value;
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "http://127.0.0.1:5000/predictSchizophrenia", true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        var response = JSON.parse(xhr.responseText);
+        var modalBody = document.querySelector(".modal-body");
+        modalBody.innerHTML = "";
+        // for (var key in response) {
+          var p = document.createElement("p");
+          p.innerHTML = response;
+          modalBody.appendChild(p);
+        // }
+      }
+    };
+    xhr.send(JSON.stringify({ input: content }));
+  }
+  function sendRequest3() {
+    var content = document.getElementById("content-target").value;
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "http://127.0.0.1:5000/predictSuicidal", true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        var response = JSON.parse(xhr.responseText);
+        var modalBody = document.querySelector(".modal-body");
+        modalBody.innerHTML = "";
+        // for (var key in response) {
+          var p = document.createElement("p");
+          p.innerHTML = response;
+          modalBody.appendChild(p);
+        // }
+      }
+    };
+    xhr.send(JSON.stringify({ input: content }));
+  }
   </script>
   <nav class="navbar navbar-expand-lg navbar-color">
 
@@ -658,9 +696,8 @@
           &#129504;
         </p>
         <div class="feature-text">
-          <h2>Detect Schizophrenia, Anxiety and Depression</h1>
-            <p>Upload a WhatsApp chat where you or your friend have expressed your emotions or enter your Twitter
-              username to understand whether there are traces of Schizophrenia.</p>
+          <h2>Detect Depression</h1>
+            <p>Check if a person shows signs of depression or not.</p>
         </div>
       </button>
 
@@ -669,9 +706,8 @@
           &#129309;
         </p>
         <div class="feature-text">
-          <h2>Available in Regional Indian Languages</h1>
-            <p>Making language a bridge not a barrier, Healthier is available in different Indian regional
-              languages.<br><br><br><br><br><br></p>
+          <h2>Detect Schizophrenia</h1>
+            <p>Detect if a person shoys symptoms of being Schizophrenic<br><br><br><br><br><br></p>
         </div>
       </button>
 
@@ -682,11 +718,8 @@
           &#128483;
         </p>
         <div class="feature-text">
-          <h2>Voice Enabled</h1>
-            <p>With the power of Alan AI, Healthier voice assistant - Minty brings out the possibility of this
-              application
-              to be used efficiently with persons suffering from various motor as well visual impairments and is also a
-              support system to the technically challenged individuals.<br><br></p>
+          <h2>Detect Suicidal Tendencies</h1>
+            <p>Detect if an individual is suffering with suicidal tendencies<br><br></p>
         </div>
       </button>
 
@@ -715,8 +748,17 @@
       </div> -->
     </div>
     <button type="button" class="btn btn-primary detect" data-toggle="modal" data-target="#exampleModalCenter" onclick="sendRequest()">
-      Analyze
+      Analyze Depression
     </button>
+    <br>
+    <button type="button" class="btn btn-primary detect" data-toggle="modal" data-target="#exampleModalCenter" onclick="sendRequest2()">
+      Analyze Schizophrenia
+    </button>
+    <br>
+    <button type="button" class="btn btn-primary detect" data-toggle="modal" data-target="#exampleModalCenter" onclick="sendRequest3()">
+      Analyze Suicidal Tendencies
+    </button>
+    <br>
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
       aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
@@ -831,18 +873,7 @@
   </div>
 
   <div class="alan-btn"></div>
-  <div class="kiran-container" id="kiran-container">
-    <h1>
-      &#128222; +1 72520 93975</h1>
-    <h3>24/7 Helpline Number</h3>
-    <p>
-      The Helpline is a free 24-hour helpline for mental health issues available in Indian regional languages.</p>
-    <div class="kiran-buttons">
-      <button class="kiran-btn" style="background-color: #FF9933;color:#ffffff">Call Now</button>
-      <button class="kiran-btn" style="background-color: #FFFFFF;">Request A Callback</button>
-      <button class="kiran-btn" style="background-color: #138808;color:#ffffff">Chat Now</button>
-    </div>
-  </div>
+ 
   <script type="text/javascript" src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
   <script>
     var alanBtnInstance = alanBtn({
