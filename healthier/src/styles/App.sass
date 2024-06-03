@@ -1,0 +1,565 @@
+.home-container
+    .home
+        background: #005ac2
+        .home-content
+            width: 70vw
+            margin: 0 auto
+            .navbar-container
+                padding: 1rem 0
+                .navbar
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    .navbar-logo
+                        font-family: 'Pacifico', cursive
+                        font-size: 2rem
+                        color: #fff
+                        text-decoration: none
+                        font-weight: 400
+                    .navbar-connect-btn
+                        // background: #fff
+                        border: 2px solid #fff
+                        color: #fff
+                        padding: 0.6rem 1.5rem
+                        border-radius: 10px
+                        font-weight: 700
+                        font-size: 1rem
+                        transition: all 0.3s ease
+                        cursor: pointer
+                        &:hover
+                            background: #fff
+                            color: #005ac2
+            .info-container
+                padding: 6rem 0
+                .info
+                    width: 60%
+                    margin: 0 auto
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    justify-content: center
+                    .title-light
+                        font-size: 1.5rem
+                        color: #fff
+                        font-weight: 500
+                        .title-logo
+                            font-weight: 700
+                    .title
+                        color: #fff
+                        font-weight: 700
+                        font-size: 4rem
+                        text-align: center
+                        line-height: 1
+                        padding: 1rem 0 2rem 0
+                    .title-sub
+                        text-align: center
+                        color: #fff
+                        font-size: 1.4rem
+                    .connect-btn
+                        margin: 2rem 0
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        background: #fff
+                        padding: 0.8rem 2rem
+                        border-radius: 15px
+                        border: 4px solid #fff
+                        cursor: pointer
+                        svg
+                            transform: translateX(-8px)
+                        .connect-btn-text
+                            color: #005ac2
+                            font-weight: 700
+                            font-size: 1.2rem
+                        &:hover
+                            background: #e4faff
+                    .title-patient
+                        display: flex
+                        align-items: center
+                        gap: 8px
+                        .title-patient-text
+                            color: #fff
+                            // font-size: 1.2rem
+                            // font-weight: 500
+                        .title-patient-btn
+                            padding: 0.1rem 0rem
+                            border-bottom: 1px solid #fff
+                            // border-radius: 10px
+                            // background: #fff
+                            &:hover
+                                border-bottom: 1px solid #e4faff
+                            a
+                                text-decoration: none
+                                color: #fff
+                                font-weight: 700
+                                &:hover
+                                    color: #e4faff
+
+    .other-content
+        width: 70vw
+        margin: 0 auto
+        cursor: context-menu
+        .resources-container
+            padding: 3rem 0
+            .resources
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                gap: 2rem
+                .resources-title
+                    font-size: 1.5rem
+                    font-weight: 500
+                    // padding: 2rem 0
+                    color: #788393
+                .resource-list
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    width: 60%
+                    .resource
+                        color: #94b0c9
+                        font-size: 2rem
+                        font-weight: 500
+                        &:hover
+                            color: #396993
+                        // font-family: 'Pacifico', cursive
+        .content-container
+            .content
+                .content-title
+                    font-size: 3rem
+                    font-weight: 700
+                    color: #041836
+                    width: 80%
+                    line-height: 1.2
+                .content-sub-title
+                    font-size: 2rem
+                    font-weight: 500
+                    color: #396993
+                    padding: 1rem 0
+                .cards-container
+                    padding: 2rem 0
+                    .cards
+                        display: flex
+                        align-items: center
+                        justify-content: space-between
+                        .card-container
+                            // padding: 1rem
+                            // background: #cae3ff
+                            background: rgb(27,27,27)
+                            background: linear-gradient(320deg, rgba(27,27,27,1) 0%, rgba(255,255,255,1) 0%, #dcedff 93%)
+                            width: 28%
+                            height: 750px
+                            border-radius: 30px
+                            transition: all 0.3s ease
+                            &:hover
+                                transform: scale(1.05)
+                            .card
+                                .card-image1
+                                    width: 100%
+                                    height: 300px
+                                    background: url(../assets/admin.png) no-repeat center center/cover
+                                    border-radius: 30px 30px 0 0
+                                .card-image2
+                                    width: 100%
+                                    height: 300px
+                                    background: url(../assets/doctor.png) no-repeat center center/cover
+                                    border-radius: 30px 30px 0 0
+                                .card-image3
+                                    width: 100%
+                                    height: 300px
+                                    background: url(../assets/patient.png) no-repeat center center/cover
+                                    border-radius: 30px 30px 0 0
+                                .card-title
+                                    padding: 1rem
+                                    font-size: 1.8rem
+                                    font-weight: 700
+                                    color: #041836
+                                    cursor: context-menu
+                                    &:hover
+                                        color: #005ac2
+                                .card-sub
+                                    padding: 1rem
+                                    font-size: 1.2rem
+                                    font-weight: 500
+                                    color: #68829c
+
+    .footer-container
+        background: #fff
+        padding: 1rem 0
+        .footer
+            width: 70vw
+            margin: 0 auto
+            display: flex
+            align-items: center
+            justify-content: space-between
+            .copy-text
+                color: #788393
+            .github-btn
+                a
+                    text-decoration: none
+                    color: #788393
+                    font-weight: 500
+                    &:hover
+                        color: #005ac2
+
+.admin-page-container
+    height: 100vh
+    display: flex
+    // background: blue
+    .admin-page-left
+        // width: 10%
+        padding: 1rem
+        background: #fff
+        border-right: 1px solid #0084ff3d
+        .admin-page-left-nav
+            height: 100%
+            // background: yellow
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            a
+                text-decoration: none
+                color: #fff
+            .left-nav-items
+                display: flex
+                flex-direction: column
+                gap: 1rem
+                a
+                    text-decoration: none
+                    color: #5a7196
+                    font-weight: 500
+                .left-nav-logo
+                    font-family: 'Pacifico', cursive
+                    font-size: 2rem
+                    // font-weight: 400
+                    padding: 0 2rem
+                    border-bottom: 1px solid #0084ff3d
+                    // color: #5a7196
+                    // margin-bottom: 1rem
+                .left-nav-item-active
+                    padding: 1rem 2rem
+                    background: #f0f8ff
+                    border-radius: 10px
+                    cursor: pointer
+                    &:hover
+                        // background: #e4faff
+                        background:#5a719641
+                .left-nav-item
+                    padding: 1rem 2rem
+                    // background: #f0f8ff
+                    border-radius: 10px
+                    cursor: pointer
+                    a
+                        text-decoration: none
+                        color: #707a93
+                        font-weight: 500
+                    &:hover
+                        background:#5a719641
+            .left-nav-logout
+                background: #005ac2
+                padding: 1rem 2rem
+                border-radius: 10px
+                cursor: pointer
+                // color: #fff
+                font-weight: 500
+                &:hover
+                    background: #004a9e
+    .admin-page-right
+        width: 86%
+        .admin-page-right-nav
+            width: 100%
+            padding: 1rem
+            border-bottom: 1px solid #0084ff3d
+            .right-nav-items
+                .right-nav-item
+                    font-size: 1.6rem
+                    font-weight: 500
+                    color: #5a7196
+        .content-container
+            padding: 1rem
+            // background: blue
+            height: 80%
+            .content
+                width: 100%
+                height: 100%
+                display: flex
+                justify-content: center
+                align-items: center
+                // background: green
+                .form-container
+                    // border: 1px solid #0084ff3d
+                    border: 1px solid #0084ff3d
+                    background: #fff
+                    border-radius: 10px
+                    padding: 2rem
+                    .form
+                        display: flex
+                        flex-direction: column
+                        gap: 1rem
+                        .form-fields
+                            display: flex
+                            gap: 1rem
+                            .form-field
+                                padding: 0.8rem 1.2rem
+                                border: 1px solid #0084ff3d
+                                border-radius: 10px
+                                background: #fff
+                                input
+                                    border: none
+                                    outline: none
+                                    background: transparent
+                                    font-family: 'Poppins', serif
+                                    font-size: 1rem
+                        .form-fields-add
+                            // display: flex
+                            // gap: 1rem
+                            .form-field
+                                padding: 0.8rem 1.2rem
+                                // border: 1px solid #efefef
+                                border: 1px solid #0084ff3d
+                                border-radius: 10px
+                                background: #fff
+                                input
+                                    border: none
+                                    outline: none
+                                    background: transparent
+                                    font-family: 'Poppins', serif
+                                    font-size: 1rem
+                        .form-fields-btn
+                            margin-top: 2rem
+                            display: flex
+                            gap: 1rem
+                            // justify-content: space-between
+                            .form-field-btn
+                                padding: 0.8rem 1.2rem
+                                // border: 1px solid #efefef
+                                border-radius: 10px
+                                background: #005ac2
+                                color: #fff
+                                font-weight: 500
+                                cursor: pointer
+                                &:hover
+                                    background: #004a9e
+        .content-view
+            .content-nav-container
+                padding-bottom: 2rem
+                .content-nav
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    .content-nav-item
+                        font-size: 1.6rem
+                        font-weight: 700
+                        color: #5a7196
+                        span
+                            cursor: pointer
+                            &:hover
+                                color: #005ac2
+                        .search-box
+                            display: flex
+                            align-items: center
+                            padding: 1rem
+                            background: #fff
+                            border-radius: 10px
+                            width: 400px
+                            gap: 0.5rem
+                            input
+                                width: 100%
+                                border: none
+                                outline: none
+                                background: transparent
+                                font-family: 'Poppins', serif
+                                font-size: 1rem
+            .doc-cards-container
+                display: flex
+                gap: 1rem
+                overflow-y: scroll
+                height: 80vh
+                .doc-cards
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    flex-wrap: wrap
+                    .doc-card-container
+                        border: 1px solid #efefef
+                        padding: 1rem
+                        border-radius: 10px
+                        background: #fff
+                        width: 30%
+                        .doc-card
+                            display: flex
+                            gap: 1rem
+                            flex-wrap: wrap
+                            // justify-content: space-between
+                            align-items: center
+                            .doc-card-left
+                                width: 200px
+                                height: 200px
+                                background: #005ac2
+                                border-radius: 50%
+                            .doc-card-right
+                                display: flex
+                                flex-direction: column
+                                gap: 1rem
+                                .doc-right-top
+                                    .doc-name
+                                        font-size: 1.4rem
+                                        font-weight: 700
+                                        color: #5a7196
+                                    .doc-spec
+                                        font-size: 1rem
+                                        font-weight: 500
+                                        // color: #5a7196
+                                .doc-right-bottom
+                                    display: flex
+                                    gap: 1rem
+                                    .doc-right-btn
+                                        padding: 0.4rem 1rem
+                                        border-radius: 10px
+                                        background: #005ac2
+                                        color: #fff
+                                        font-weight: 500
+                                        cursor: pointer
+                                        &:hover
+                                            background: #004a9e
+            .rep-cards-container
+                display: flex
+                flex-direction: column
+                gap: 1rem
+                overflow-y: scroll
+                height: 80vh
+                .rep-cards
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    flex-wrap: wrap
+                    .rep-card-container
+                        border: 1px solid #0084ff3d
+                        background: #fff
+                        border-radius: 10px
+                        width: 18%
+                        .rep-card
+                            .rep-card-top
+                                width: 100%
+                                height: 300px
+                                background: #005ac2
+                                border-radius: 10px 10px 0 0
+                            .rep-card-bottom
+                                padding: 1rem
+                                .rep-card-text
+                                    font-size: 1.2rem
+                                    font-weight: 500
+                                    color: #5a7196
+                                .rep-card-extra
+                                    display: flex
+                                    align-items: center
+                                    justify-content: space-between
+                                    font-style: 1rem
+                                    color: #5a7196
+            .patient-info-container
+                .patient-info
+                    display: flex
+                    flex-direction: column
+                    gap: 2rem
+                    .patient-info-top
+                        display: flex
+                        flex-direction: column
+                        gap: 1rem
+                        .info-top-card
+                            display: flex
+                            align-items: center
+                            justify-content: space-between
+                            .patient-info-card
+                                width: 30%
+                                padding: 1rem
+                                background: #fff
+                                border-radius: 10px
+                    .patient-info-bottom
+
+        .details-container
+            .details
+                display: flex
+                flex-direction: column
+                gap: 2rem
+                .details-header
+                    font-weight: 500
+                    font-size: 1.4rem
+                .details-box
+                    .detail
+                        display: flex
+                        flex-direction: column
+                        gap: 1rem
+                        .det-image
+                            width: 200px
+                            height: 200px
+                            background: #005ac2
+                            border-radius: 50%
+                        .det
+                            display: flex
+                            align-items: center
+                            justify-content: space-between
+                            padding: 2rem
+                            background: #fff
+                            border-radius: 10px
+                            border: 1px solid #0084ff3d
+        .intro-box
+            padding: 3rem 2rem
+            border-radius: 10px
+            background: #57a5ff
+            color: #fff
+            .intro
+                .intro-title
+                    font-size: 2rem
+                    font-weight: 700
+                .intro-sub
+                    font-size: 1.4rem
+                    font-weight: 500
+                    // margin-top: 1rem
+
+
+@media screen and (max-width: 768px)
+    .home-container
+        .home
+            .home-content
+                width: 94vw
+                .navbar-container
+                .info-container
+                    padding: 2rem 0
+                    .info
+                        width: 100%
+                        .title-light
+                            font-size: 1rem
+                        .title
+                            font-size: 3rem
+                            padding: 0.5rem 0 1rem 0
+                        .title-sub
+                            font-size: 1rem
+        .other-content
+            width: 94vw
+            .resources-container
+                .resources
+                    .resources-title
+                        font-size: 1rem
+                    .resource-list
+                        width: 100%
+                        flex-wrap: wrap
+                        .resource
+                            font-size: 1.2rem
+            .content-container
+                .content
+                    .content-title
+                        font-size: 2rem
+                        width: 100%
+                    .content-sub-title
+                        font-size: 1.2rem
+                    .cards-container
+                        .cards
+                            flex-direction: column
+                            gap: 2rem
+                            .card-container
+                                width: 100%
+                                height: auto
+        .footer-container
+            .footer
+                width: 94vw
